@@ -43,7 +43,6 @@ class _NotesScreenState extends State<NotesScreen> {
               );
 
               if (result == true) {
-                print("Qo'shildi");
                 setState(() {});
               }
             },
@@ -56,8 +55,8 @@ class _NotesScreenState extends State<NotesScreen> {
         itemBuilder: (context, index) {
           final note = notesController.notes[index];
           return ListTile(
-            title: Text("Salom"),
-            subtitle: Text("22.02.2005"),
+            title: Text(note.remainder),
+            subtitle: Text(note.date.toString()),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -72,7 +71,6 @@ class _NotesScreenState extends State<NotesScreen> {
                     );
 
                     if (result == true) {
-                      print("Taxrirlandi");
                       setState(() {});
                     }
                   },
